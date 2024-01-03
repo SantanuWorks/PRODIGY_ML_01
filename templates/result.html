@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Result - House Price Predictor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<style>
+			th, td{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper" style="background-color: whitesmoke;">
+			<div class="inner" id="result-inner">
+				<div class="image-holder" id="result-img-holder">
+					<img src="{% static 'images/img1.png' %}" alt="">
+				</div>
+				<div class="result">
+					<h3>Predictor Result</h3>
+					<table>
+						<tr>
+							<th>Area</th>
+							<th>Total Bedrooms</th>
+							<th>Total Bathrooms</th>
+						</tr>
+						<tr>
+							<td> {{ area }} </td>
+							<td> {{ beds }} </td>
+							<td> {{ baths }} </td>
+						</tr>
+					</table>
+					<h2 align="center">House Price: ₹ {{ result }}</h2>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
